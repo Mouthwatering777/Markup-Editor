@@ -1,0 +1,8 @@
+.Background {
+  background-color: rgb(179, 247, 209);
+  padding: 40px;
+  font-family: Arial;
+  text-align: center;
+  /* background-image: url("./assests/images/1.png"); */
+  background-repeat: no-repeat;
+}
