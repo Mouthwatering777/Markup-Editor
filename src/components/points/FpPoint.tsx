@@ -27,7 +27,6 @@ export const FpPoint: React.FC<Props> = ({
         strokeWidth="1"
         fill={color}
         onMouseDown={handleMouseDownfp}
-        onMouseUp={handleMouseUpfp}
       />
       <rect
         x={x + 30}
@@ -43,8 +42,8 @@ export const FpPoint: React.FC<Props> = ({
         x={x + 40}
         y={y + 5}
         fill={color}
+        style={{ userSelect: "none" }}
         onMouseDown={handleMouseDownfp}
-        onMouseUp={handleMouseUpfp}
         fontSize="1.3rem"
       >
         {label}

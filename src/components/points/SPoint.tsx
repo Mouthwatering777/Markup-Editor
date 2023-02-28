@@ -27,7 +27,6 @@ export const SPoint: React.FC<Props> = ({
         strokeWidth="1"
         fill={color}
         onMouseDown={handleMouseDownS}
-        // onMouseUp={handleMouseUpfp}
       />
       <rect
         x={x + 30}
@@ -45,7 +44,6 @@ export const SPoint: React.FC<Props> = ({
         fill={color}
         onMouseDown={handleMouseDownS}
         style={{ userSelect: "none" }}
-        // onMouseUp={handleMouseUpfp}
         fontSize="1.3rem"
       >
         {label}

@@ -78,19 +78,6 @@ function App() {
     newPoints[idx].y = y;
     setFpPoints(newPoints);
   };
-  //----- Update x, y position of all points  -----
-  const handlefpPointsChange = (A: Point, B: Point, C: Point, D: Point) => {
-    const newPoints = [...fpPoints];
-    newPoints[0].x = A.x;
-    newPoints[0].x = A.y;
-    newPoints[1].x = B.x;
-    newPoints[1].x = B.y;
-    newPoints[2].x = C.x;
-    newPoints[2].x = C.y;
-    newPoints[3].x = D.x;
-    newPoints[3].x = D.y;
-    setFpPoints(newPoints);
-  };
 
   const handleSPointChange = (idx: number, x: number, y: number) => {
     const newPoints = [...sPoints];
@@ -110,7 +97,7 @@ function App() {
               points={points}
               shapes={shapes}
               handlePointChange={handlePointChange}
-              constraints={[]}
+              // constraints={[]}
             />
           }
         ></Route>

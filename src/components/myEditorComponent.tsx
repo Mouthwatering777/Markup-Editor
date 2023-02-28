@@ -21,8 +21,7 @@ type Props = {
   points: point[];
   handlePointChange: Function;
   shapes: shape[];
-  constraints: constraint[];
-  // labels: label[];
+  // constraints: constraint[];
 };
 
 // ------------- MAIN COMPONENT ---------------
@@ -31,8 +30,7 @@ export const MyEditorComponent: FC<Props> = ({
   points,
   handlePointChange,
   shapes,
-  constraints,
-  // labels,
+  // constraints,
 }) => {
   // console.log(process.env.PUBLIC_URL);
 
@@ -172,31 +170,19 @@ export const MyEditorComponent: FC<Props> = ({
           />
 
           {/* ----- POINTS ----- */}
-          {constraints.length === 0 &&
-            points.map((point, index) => (
-              <Point
-                key={index}
-                x={point.x}
-                y={point.y}
-                color={point.color}
-                label={point.label}
-                handleMouseDown={() => {
-                  setMouseDown(true);
-                  setSelectedIdx(index);
-                }}
-              />
-            ))}
-          {/* ----- Constraints ----- */}
-          {/* {constraints.length === 1 && constraints[0] == constraint.FP && (
-            <FPPoint
-              points={points}
-              //   handleMouseDown={() => {
-              //     setMouseDown(true);
-              //     setSelectedIdx(index);
-              //   }
-              // }
+          {points.map((point, index) => (
+            <Point
+              key={index}
+              x={point.x}
+              y={point.y}
+              color={point.color}
+              label={point.label}
+              handleMouseDown={() => {
+                setMouseDown(true);
+                setSelectedIdx(index);
+              }}
             />
-          )} */}
+          ))}
         </svg>
       </div>
     </>

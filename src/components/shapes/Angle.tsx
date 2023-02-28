@@ -30,16 +30,9 @@ const Angle: React.FC<AngleProps> = (props) => {
   const x2 = pivot.x + (radius * (ref2.x - pivot.x)) / d2;
   const y2 = pivot.y + (radius * (ref2.y - pivot.y)) / d2;
 
-  const textStyle = {
-    fontFamily: "Arial",
-    fontSize: 20,
-    stroke: "lightblue",
-    fill: "transparent",
-  };
-
-  console.log(
-    `startAngle:${startAngle} endAngle:${endAngle} Result:${largeArcFlag} Angle:${Angle} Result:${Result}`
-  );
+  // console.log(
+  //   `startAngle:${startAngle} endAngle:${endAngle} Result:${largeArcFlag} Angle:${Angle} Result:${Result}`
+  // );
   return (
     <>
       <path
@@ -48,38 +41,18 @@ const Angle: React.FC<AngleProps> = (props) => {
         fill="none"
         strokeWidth="2"
       ></path>
-      <text x={pivot.x - 50} y={pivot.y + 50} style={textStyle}>
+      <text
+        x={pivot.x - 50}
+        y={pivot.y + 50}
+        style={{ userSelect: "none" }}
+        stroke={"lightblue"}
+        fontSize="20"
+        fontFamily="Arial"
+        fill="yellow"
+      >
         {Display}
       </text>
     </>
   );
 };
 export default Angle;
-/* {Angle >= Math.PI && (
-        <path
-          d={`M${pivot.x} ${pivot.y} L${x1} ${y1} A${radius} ${radius} 0 ${largeArcFlag} 0 ${x2} ${y2} Z`}
-          stroke="red"
-          fill="none"
-          strokeWidth="2"
-        />
-      )}
-      {Angle <= Math.PI && (
-        <path
-          d={`M${pivot.x} ${pivot.y} L${x2} ${y2} A${radius} ${radius} 0 ${
-            (Result * Math.PI) / 180
-          } 0 ${x1} ${y1} Z`}
-          stroke="red"
-          fill="none"
-          strokeWidth="2"
-        />
-      )} */
-
-//   const pathData = [
-//     `M ${ref1.x} ${ref1.y}`,
-//     `A ${radius} ${radius} 0 ${largeArcFlag} 0 ${ref2.x} ${ref2.y}`,
-//   ].join(" ");
-
-//   console.log(
-//     `startAngle:${startAngle} endAngle:${endAngle} Result:${largeArcFlag}`
-//   );
-//   return <path d={pathData} stroke="red" fill="none" strokeWidth="2" />;
